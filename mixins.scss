@@ -1,0 +1,11 @@
+@import "color";
+
+@mixin button{
+  color: $white-color;
+  background: $background-color__button;
+  border: none;
+  font: {
+    size: 1.375em;
+    family: $basic-font;
+  };
+}
