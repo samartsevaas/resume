@@ -16,6 +16,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: "Raleway", sans-serif;
   vertical-align: baseline;
 }
 
@@ -360,26 +361,30 @@ textarea {
   padding: 0.2em 0;
 }
 
-.introducing {
+.welcome {
   position: sticky;
   top: 0;
 }
 
 .full-width {
   max-width: 1225px;
+  display: flex;
   width: 100%;
   margin: 0 auto;
-  display: flex;
   align-items: flex-start;
 }
 
-.main-content-width {
+.column {
+  flex-direction: column;
+}
+
+.main-content__width {
   max-width: 950px;
   width: 100%;
   display: flex;
 }
 
-.introducing {
+.welcome {
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -387,32 +392,31 @@ textarea {
   padding: 110px;
   color: #fff;
   line-height: 1.5;
-  font-family: "Raleway", sans-serif;
   font-size: 0.875em;
 }
-.introducing .introducing__button {
+.welcome .welcome__button {
   color: #fff;
   background: #fb6470;
   border: none;
   font-size: 1.375em;
-  font-family: "Raleway", sans-serif;
   width: 160px;
   height: 50px;
   border-radius: 5px;
   margin-top: 54px;
 }
-.introducing h1 {
+.welcome h1 {
   font-size: 3em;
   font-weight: 600;
 }
 
 .left-sidebar {
   position: sticky;
-  margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   max-width: 275px;
+  height: 100%;
+  overflow: auto;
 }
 .left-sidebar .avatar-gradient {
   display: flex;
@@ -428,12 +432,10 @@ textarea {
 .left-sidebar .avatar-gradient .avatar-gradient__ul li:first-child {
   color: #fff;
   font-size: 2em;
-  font-family: "Raleway", sans-serif;
 }
 .left-sidebar .avatar-gradient .avatar-gradient__ul li:nth-child(2) {
   color: #fff;
   font-size: 1em;
-  font-family: "Raleway", sans-serif;
 }
 .left-sidebar .left-sidebar__navigation li {
   background: #353541;
@@ -444,10 +446,45 @@ textarea {
   text-decoration: none;
   color: #fff;
   font-size: 1.375em;
-  font-family: "Raleway", sans-serif;
 }
 .left-sidebar .left-sidebar__navigation a :visited {
   color: #fff;
+}
+
+.introducing {
+  width: 100%;
+  padding: 80px;
+  line-height: 1.2;
+}
+.introducing .introducing__left-side {
+  padding-right: 60px;
+}
+.introducing .heading h1 {
+  font-size: 2em;
+  font-weight: 600;
+}
+.introducing .heading p {
+  font-size: 0.875em;
+}
+.introducing .heading span::before {
+  content: "";
+  width: 75px;
+  height: 2px;
+  background: red;
+  position: absolute;
+  margin-top: 43px;
+}
+.introducing .profile__list {
+  margin-top: 50px;
+}
+.introducing .profile__list li span {
+  font-size: 1.125em;
+  font-weight: 600;
+}
+.introducing .profile__list li {
+  padding: 15px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 /*# sourceMappingURL=style_resume-home.css.map */

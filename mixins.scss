@@ -1,11 +1,26 @@
 @import "color";
 
+
+@mixin standart__block-custom{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @mixin button{
   color: $white-color;
   background: $background-color__button;
   border: none;
   font: {
     size: 1.375em;
-    family: $basic-font;
   };
+}
+
+@mixin underline{
+  content: "";
+  width: 75px;
+  height: 2px;
+  background: red;
+  position: absolute;
+  margin-top: 43px;
 }
