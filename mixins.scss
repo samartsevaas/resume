@@ -24,3 +24,10 @@
   position: absolute;
   margin-top: 43px;
 }
+
+@mixin block_center{
+  width: 100%;
+  padding: 80px;
+  padding-bottom: 0;
+  line-height: 1.2;
+}

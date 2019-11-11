@@ -361,9 +361,8 @@ textarea {
   padding: 0.2em 0;
 }
 
-.welcome {
-  position: sticky;
-  top: 0;
+* {
+  box-sizing: border-box;
 }
 
 .full-width {
@@ -376,12 +375,19 @@ textarea {
 
 .column {
   flex-direction: column;
+  margin-left: 275px;
 }
 
 .main-content__width {
   max-width: 950px;
   width: 100%;
   display: flex;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chanel__bottom {
+  padding-bottom: 0;
 }
 
 .welcome {
@@ -410,13 +416,14 @@ textarea {
 }
 
 .left-sidebar {
-  position: sticky;
+  position: fixed;
   width: 100%;
   display: flex;
   flex-direction: column;
   max-width: 275px;
-  height: 100%;
   overflow: auto;
+  height: 100%;
+  background: #353541;
 }
 .left-sidebar .avatar-gradient {
   display: flex;
@@ -439,7 +446,7 @@ textarea {
 }
 .left-sidebar .left-sidebar__navigation li {
   background: #353541;
-  padding: 20px;
+  padding: 21px;
   border-bottom: 1px solid #22222f;
 }
 .left-sidebar .left-sidebar__navigation a {
@@ -454,6 +461,7 @@ textarea {
 .introducing {
   width: 100%;
   padding: 80px;
+  padding-bottom: 0;
   line-height: 1.2;
 }
 .introducing .introducing__left-side {
@@ -485,6 +493,81 @@ textarea {
   padding: 15px;
   background: #f9f9f9;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.work-experience {
+  width: 100%;
+  padding: 80px;
+  padding-bottom: 0;
+  line-height: 1.2;
+}
+
+.work-experience {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Droid Sans", sans-serif;
+}
+.work-experience:before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  width: 4px;
+  background-color: #000;
+}
+.work-experience .entry {
+  width: calc(100% - 80px);
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  left: -5px;
+}
+.work-experience .entry .work-experience-info {
+  width: calc(50% - 80px);
+  float: left;
+  padding: 20px;
+  clear: both;
+  text-align: right;
+}
+.work-experience .entry .work-experience-info:not(:first-child) {
+  margin-top: -60px;
+}
+.work-experience .entry .work-experience-info .work-experience-info h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  position: relative;
+  color: #000;
+}
+.work-experience .entry .work-experience-info .work-experience-info h1:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 4px solid #ffffff;
+  background-color: #1D1D1D;
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -73px;
+  z-index: 1000;
+}
+.work-experience .entry .work-experience-info .work-experience-info {
+  color: #000;
+}
+.work-experience .entry .work-experience-info .work-experience-info p, .work-experience .entry .work-experience-info .work-experience-info h1 {
+  line-height: 1.4em;
+}
+.work-experience .entry .work-experience-info:nth-child(2n) {
+  text-align: left;
+  float: right;
+}
+.work-experience .entry .work-experience-info:nth-child(2n) .work-experience-info h1:before {
+  left: -63px;
+}
+.work-experience .entry .work-experience-info:nth-child(2n) .work-experience-info h1.big:before {
+  transform: translate(-8px, -50%);
 }
 
 /*# sourceMappingURL=style_resume-home.css.map */
