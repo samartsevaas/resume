@@ -475,18 +475,7 @@ textarea {
     padding-right: 60px;
   }
   & .heading {
-    & h1 {
-      font: {
-        size: 2em;
-        weight: 600;
-      };
-    }
-    & p {
-      font-size: 0.875em;
-    }
-    & span::before {
-      @include underline;
-    }
+    @include title__underline;
   }
   & .profile__list {
     margin-top: 50px;
@@ -504,76 +493,37 @@ textarea {
   }
 }
 
-.work-experience{
-  @include block_center;
-  }
-
 .work-experience {
-  min-height:100vh;
-  margin:0;
-  font-family: 'Droid Sans', sans-serif;
-  &:before {
-    content: '';
-    position: fixed;
-    top:0px;
-    left:50%;
-    bottom:0px;
-    transform:translateX(-50%);
-    width:4px;
-    background-color:#000;
+  @include block_center;
+
+  & .heading{
+    @include title__underline;
   }
-  .entry {
-    width:calc(100% - 80px);
-    max-width:800px;
-    margin:auto;
+  & .timeline-block__popover{
+    @include popover_style;
     position: relative;
-    left:-5px;
-    .work-experience-info {
-      width:calc(50% - 80px);
-      float:left;
-      padding:20px;
-      clear:both;
-      text-align:right;
-      &:not(:first-child) {
-        margin-top:-60px;
-      }
-      .work-experience-info h1 {
-        font-size:32px;
-        margin-bottom:12px;
-        position: relative;
-        color:#000;
-        &:before {
-          content: '';
-          position: absolute;
-          width:8px;
-          height:8px;
-          border:4px solid #ffffff;
-          background-color:#1D1D1D;
-          border-radius:100%;
-          top:50%;
-          transform:translateY(-50%);
-          right:-73px;
-          z-index:1000;
-        }
-      }
-      .work-experience-info {
-        color:#000;
-        p, h1 {
-          line-height:1.4em;
-        }
-      }
-      &:nth-child(2n) {
-        text-align:left;
-        float:right;
-        .work-experience-info h1 {
-          &:before {
-            left:-63px;
-          }
-          &.big:before {
-            transform:translate(-8px,-50%);
-          }
-        }
-      }
+    width: 42%;
+    margin-bottom: 60px;
+    padding: 18px;
+    border-radius: 10px;
+    background: $main-color;
+    &:nth-child(2n+1){
+      float: right;
+
+      margin-left: 207px;
     }
+    &:nth-child(2n){
+      clear: both;
+    }
+  }
+  & .timeline-block__popover-circle{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border:2px solid #000;
+    background: #fb6470;
+    margin-left: -80px;
+
   }
 }
