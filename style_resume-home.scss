@@ -499,6 +499,9 @@ textarea {
   & .heading{
     @include title__underline;
   }
+  & .timeline-block{
+    width: 100%;
+  }
   & .timeline-block__popover{
     @include popover_style;
     position: relative;
@@ -507,13 +510,22 @@ textarea {
     padding: 18px;
     border-radius: 10px;
     background: $main-color;
+
+    &:nth-child(2n){
+      float: left;
+      clear: both;
+      transform: scale(-1,1);
+      & .work-position{
+        transform: scale(-1,1);
+      }
+      & .work-information{
+        transform: scale(-1,1);
+      }
+    }
     &:nth-child(2n+1){
+      clear: both;
       float: right;
 
-      margin-left: 207px;
-    }
-    &:nth-child(2n){
-      clear: both;
     }
   }
   & .timeline-block__popover-circle{
@@ -523,7 +535,7 @@ textarea {
     border-radius: 50%;
     border:2px solid #000;
     background: #fb6470;
-    margin-left: -80px;
-
+    margin-left: -89px;
+    z-index: 10;
   }
 }
