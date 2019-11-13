@@ -565,3 +565,42 @@ textarea {
     padding: 15px;
   }
 }
+
+
+.timeline-block{
+  position: relative;
+  width: 100%;
+  & li{
+    padding: 15px;
+    background: $main-color;
+    color: $white-color;
+    border-radius: 10px;
+    width: 40%;
+    clear: both;
+  }
+  & li:nth-child(odd){
+    float: right;
+
+  }
+  & li:nth-child(even){
+    float: left;
+
+  }
+  & .timeline-el-item__line{
+    position: absolute;
+    left: 2px;
+    height: 100%;
+    border-left: 2px solid #000;
+  }
+  & .timeline-el-item__wrapper{
+    position: relative;
+  }
+  & .timeline-el-item__circle{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: red;
+    border: 2px solid #000;
+  }
+}
