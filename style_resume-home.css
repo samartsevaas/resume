@@ -519,6 +519,9 @@ textarea {
 .work-experience .timeline-block {
   width: 100%;
 }
+.work-experience .timeline-block::before {
+  content: "";
+}
 .work-experience .timeline-block__popover {
   background: #353541;
   padding: 18px;
@@ -527,7 +530,7 @@ textarea {
   border-radius: 8px;
   position: relative;
   width: 42%;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   padding: 18px;
   border-radius: 10px;
   background: #353541;
@@ -545,6 +548,7 @@ textarea {
 .work-experience .timeline-block__popover:nth-child(2n) {
   float: left;
   clear: both;
+  margin-bottom: 10px;
   transform: scale(-1, 1);
 }
 .work-experience .timeline-block__popover:nth-child(2n) .work-position {
@@ -566,6 +570,26 @@ textarea {
   background: #fb6470;
   margin-left: -89px;
   z-index: 10;
+}
+.work-experience .timeline-block__popover-circle .timeline-block__popover-circle-big {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  left: -12px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+}
+.skills div {
+  padding: 15px;
 }
 
 /*# sourceMappingURL=style_resume-home.css.map */
