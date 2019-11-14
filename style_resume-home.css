@@ -593,31 +593,74 @@ textarea {
 }
 
 .timeline-block {
+  display: flex;
   position: relative;
-  width: 100%;
+}
+.timeline-block .timeline-el__right {
+  margin-left: 70px;
+}
+.timeline-block .timeline-el__right .timeline-el-item .timeline-el-item__wrapper .timeline-el-item__line {
+  margin-left: -22%;
+}
+.timeline-block .timeline-el__right .timeline-el-item .timeline-el-item__circle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: red;
+  border: 2px solid #000;
+  right: 119.3%;
+}
+.timeline-block .timeline-el__right .timeline-el-item .timeline-el-item__circle-big {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 9;
+  margin-top: -9px;
+  margin-left: -9px;
+}
+.timeline-block .timeline-el__left {
+  margin-right: 70px;
+}
+.timeline-block .timeline-el__left .timeline-el-item .timeline-el-item__wrapper .timeline-el-item__line {
+  margin-left: 121%;
+}
+.timeline-block .timeline-el__left .timeline-el-item .timeline-el-item__circle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: red;
+  border: 2px solid #000;
+  left: 118.3%;
+  top: 85%;
+}
+.timeline-block .timeline-el__left .timeline-el-item .timeline-el-item__circle-big {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 9;
+  margin-top: -9px;
+  margin-left: -9px;
 }
 .timeline-block li {
+  position: relative;
   padding: 15px;
   background: #353541;
   color: #fff;
   border-radius: 10px;
-  width: 40%;
-  clear: both;
+  font-size: 0.875em;
+  line-height: 1.5;
 }
-.timeline-block li:nth-child(odd) {
-  float: right;
+.timeline-block .timeline-el__left li:first-child {
+  margin-top: 112px;
+  margin-bottom: 150px;
 }
-.timeline-block li:nth-child(even) {
-  float: left;
-}
-.timeline-block .timeline-el-item__line {
-  position: absolute;
-  left: 2px;
-  height: 100%;
-  border-left: 2px solid #000;
-}
-.timeline-block .timeline-el-item__wrapper {
-  position: relative;
+.timeline-block .timeline-el__right li:first-child {
+  margin-top: 25px;
+  margin-bottom: 150px;
 }
 .timeline-block .timeline-el-item__circle {
   position: absolute;
@@ -626,6 +669,16 @@ textarea {
   border-radius: 50%;
   background: red;
   border: 2px solid #000;
+  z-index: 10;
+}
+.timeline-block .timeline-el-item__line {
+  position: absolute;
+  height: 100%;
+  border-left: 1px solid #000;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style_resume-home.css.map */
