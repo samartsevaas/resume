@@ -496,88 +496,18 @@ textarea {
 .work-experience {
   @include block_center;
 
-  & .heading{
+  & .heading {
     @include title__underline;
   }
-  & .timeline-block{
-    width: 100%;
-    &::before{
-      content: "";
-    }
-  }
-  & .timeline-block__popover{
-    @include popover_style;
-    position: relative;
-    width: 42%;
-    margin-bottom: 50px;
-    padding: 18px;
-    border-radius: 10px;
-    background: $main-color;
-
-
-    &:nth-child(2n){
-      float: left;
-      clear: both;
-      margin-bottom: 10px;
-      transform: scale(-1,1);
-      & .work-position{
-        transform: scale(-1,1);
-      }
-      & .work-information{
-        transform: scale(-1,1);
-      }
-    }
-    &:nth-child(2n+1){
-      clear: both;
-      float: right;
-
-    }
-  }
-  & .timeline-block__popover-circle{
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border:2px solid #000;
-    background: #fb6470;
-    margin-left: -89px;
-    z-index: 10;
-    & .timeline-block__popover-circle-big{
-      width: 35px;
-      height: 35px;
-      border: 2px solid #000;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      margin: auto;
-      border-radius: 50%;
-      left: -12px;
-
-    }
-  }
 }
-
-.skills{
-  display: flex;
-  justify-content: space-between;
-  & div{
-    padding: 15px;
-  }
-}
-
 
 .timeline-block{
   display: flex;
   position: relative;
   & .timeline-el__right{
     margin-left: 70px;
-    & .timeline-el-item{
-      & .timeline-el-item__wrapper{
-        & .timeline-el-item__line{
-          margin-left: -22%;
-        }
-      }
+    & .timeline-el-item {
+
       & .timeline-el-item__circle{
         position: absolute;
         width: 18px;
@@ -603,9 +533,7 @@ textarea {
 
     & .timeline-el-item{
       & .timeline-el-item__wrapper{
-        & .timeline-el-item__line{
-          margin-left: 121%;
-        }
+
       }
       & .timeline-el-item__circle{
         position: absolute;
@@ -615,7 +543,7 @@ textarea {
         background: red;
         border: 2px solid #000;
         left: 118.3%;
-        top: 85%;
+        top: 78%;
       }
       & .timeline-el-item__circle-big{
         width: 33px;
@@ -663,5 +591,43 @@ textarea {
     top: 0;
     left: 0;
     margin: auto;
+  }
+}
+
+.skills{
+  display: flex;
+  justify-content: space-between;
+  & div{
+    padding: 15px;
+  }
+}
+
+
+
+
+/* test timeline*/
+
+
+.timeline{
+  & .timeline-ul{
+    padding-top: 10px;
+    & li:nth-child(odd) div{
+      left: 45px;
+      transform: translate3d(200px, 0, 0);
+    }
+    & li{
+      position: relative;
+      padding: 15px;
+      margin: 0 auto;
+      background: #000;
+      width: 3px;
+    }
+    & .timeline-li__text{
+      padding: 15px;
+      color: #fff;
+      background: $main-color;
+      position: relative;
+      width: 350px;
+    }
   }
 }
