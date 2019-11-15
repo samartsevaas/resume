@@ -63,3 +63,19 @@
     text-transform: uppercase;
   }
 }
+@mixin timeline-circle{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border:2px solid #000;
+}
+
+@mixin popover_style{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 16px 10px 0;
+  border-color: transparent $main-color transparent transparent;
+}
