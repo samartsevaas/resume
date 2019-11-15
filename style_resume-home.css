@@ -609,19 +609,30 @@ textarea {
 }
 
 /* test timeline*/
-.timeline .timeline-ul {
-  padding-top: 10px;
+.timeline .timeline-ul .timeline-li:nth-child(odd) .timeline-li__text {
+  transform: translate3d(45px, 0, 0);
 }
-.timeline .timeline-ul li:nth-child(odd) div {
-  left: 45px;
-  transform: translate3d(200px, 0, 0);
+.timeline .timeline-ul .timeline-li:nth-child(even) .timeline-li__text {
+  transform: translate3d(-395px, 0, 0);
 }
-.timeline .timeline-ul li {
+.timeline .timeline-ul .timeline-li {
   position: relative;
-  padding: 15px;
   margin: 0 auto;
   background: #000;
-  width: 3px;
+  width: 1px;
+}
+.timeline .timeline-ul .timeline-li .timeline-li__text {
+  border-radius: 10px;
+}
+.timeline .timeline-ul .timeline-li .timeline-li__text span {
+  font-weight: 600;
+}
+.timeline .timeline-ul .timeline-li .timeline-li__text .timeline-li__text-pink {
+  color: #fb6470;
+  text-transform: uppercase;
+}
+.timeline .timeline-ul .timeline-li .timeline-li__text .timeline-li__text-size {
+  font-size: 0.875em;
 }
 .timeline .timeline-ul .timeline-li__text {
   padding: 15px;

@@ -610,17 +610,30 @@ textarea {
 
 .timeline{
   & .timeline-ul{
-    padding-top: 10px;
-    & li:nth-child(odd) div{
-      left: 45px;
-      transform: translate3d(200px, 0, 0);
+    & .timeline-li:nth-child(odd) .timeline-li__text{
+      transform: translate3d(45px, 0, 0);
     }
-    & li{
+    & .timeline-li:nth-child(even) .timeline-li__text{
+      transform: translate3d(-395px, 0, 0);
+    }
+    & .timeline-li{
       position: relative;
-      padding: 15px;
       margin: 0 auto;
       background: #000;
-      width: 3px;
+      width: 1px;
+      & .timeline-li__text{
+        border-radius: 10px;
+        & span{
+          font-weight: 600;
+        }
+        & .timeline-li__text-pink{
+          color: $timeline-color;
+          text-transform: uppercase;
+        }
+        & .timeline-li__text-size{
+          font-size: $size-little;
+        }
+      }
     }
     & .timeline-li__text{
       padding: 15px;
