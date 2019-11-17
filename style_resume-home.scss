@@ -384,8 +384,8 @@ textarea {
   max-width: 950px;
   width: 100%;
   display: flex;
-  padding-bottom: 80px;
-  border-bottom: 1px solid #e0e0e0;
+  @include blocks_between;
+
 }
 .chanel__bottom{
   padding-bottom: 0
@@ -495,6 +495,7 @@ textarea {
 
 .blocks-tittle {
   @include block_center;
+  display: block;
 
   & .heading {
     @include title__underline;
@@ -504,8 +505,8 @@ textarea {
 
 .timeline{
   display: block;
-  padding-bottom: 80px;
   & .timeline-ul{
+    @include blocks_between;
     & li:last-child{
       padding-bottom: 0;
     }
@@ -616,12 +617,49 @@ textarea {
   }
 }
 
+.blocks-tittle_alternative {
+  background: #1d1d24;
+  color: $white-color;
+}
 
-
-.skills{
-  display: flex;
-  justify-content: space-between;
-  & div{
-    padding: 15px;
+.my-skills {
+  .heading-alternative{
+    & span::before {
+      background: $timeline-color;
+    }
+  }
+  .skills {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.125em;
+    .skills__sidebar_left{
+      @include skills__sidebar;
+    }
+    .skills__sidebar_right{
+      @include skills__sidebar;
+    }
+    &__sidebar-bar{
+      width: 100%;
+      background: #bcbcbe;
+      height: 4px;
+      &_percent{
+        background: $timeline-color;
+        height: 4px;
+        position: relative;
+        &-value{
+          width: 50%;
+        }
+        &::after{
+          content: "";
+          position: absolute;
+          right: -10px;
+          top:-8px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: $timeline-color;
+        }
+      }
+    }
   }
 }
