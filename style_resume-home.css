@@ -734,11 +734,26 @@ textarea {
 .communication__sidebar-title {
   font-weight: 600;
 }
+.communication__sidebar-title-value {
+  font-size: 0.875em;
+}
 .communication__sidebar-button {
   color: #fff;
   background: #fb6470;
   border: none;
-  font-size: 1.375em;
+  font-size: 1em;
+  height: 35px;
+  width: 100px;
+  align-self: flex-end;
+  margin-right: 78px;
+  margin-top: 25px;
+}
+.communication__sidebar-information {
+  line-height: 3.2;
+}
+.communication__sidebar-placeholder {
+  display: flex;
+  flex-direction: column;
 }
 .communication__sidebar_left {
   border-right: 1px solid #ccc;

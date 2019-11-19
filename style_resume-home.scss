@@ -403,6 +403,7 @@ textarea {
   };
   & .welcome__button{
     @include button;
+    font-size: 1.375em;
     width: 160px;
     height: 50px;
     border-radius: 5px;
@@ -683,9 +684,25 @@ textarea {
     }
     &-title{
       font-weight: 600;
+      &-value{
+        font-size: 0.875em;
+      }
     }
     &-button{
       @include button;
+      font-size: 1em;
+      height: 35px;
+      width: 100px;
+      align-self: flex-end;
+      margin-right: 78px;
+      margin-top: 25px;
+    }
+    &-information{
+      line-height: 3.2;
+    }
+    &-placeholder{
+      display: flex;
+      flex-direction: column;
     }
     &_left{
       border-right: 1px solid #ccc;
