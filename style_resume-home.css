@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input, textarea {
   margin: 0;
   padding: 0;
   border: 0;
@@ -669,6 +669,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   font-size: 1.125em;
+  padding-bottom: 80px;
 }
 .my-skills .skills .skills__sidebar_left {
   width: 40%;
@@ -710,6 +711,55 @@ textarea {
   height: 20px;
   border-radius: 50%;
   background: #fb6470;
+}
+
+.communication {
+  display: flex;
+}
+.communication__sidebar {
+  display: flex;
+  width: 110%;
+  flex-direction: column;
+}
+.communication__sidebar-icon {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 2.2em;
+}
+.communication__sidebar-block {
+  display: flex;
+}
+.communication__sidebar-title {
+  font-weight: 600;
+}
+.communication__sidebar-button {
+  color: #fff;
+  background: #fb6470;
+  border: none;
+  font-size: 1.375em;
+}
+.communication__sidebar_left {
+  border-right: 1px solid #ccc;
+  height: 100%;
+}
+.communication__sidebar_left input, .communication__sidebar_left textarea {
+  padding: 10px;
+  font-size: 0.875em;
+  font-style: italic;
+  width: 80%;
+  border: 1px solid #000;
+  margin-top: 25px;
+}
+.communication__sidebar_left textarea {
+  height: 93px;
+}
+.communication__sidebar_left .communication__sidebar-title {
+  font-size: 1.375em;
+}
+.communication__sidebar_right {
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style_resume-home.css.map */

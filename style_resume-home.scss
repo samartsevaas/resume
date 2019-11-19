@@ -14,7 +14,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input, textarea {
   margin: 0;
   padding: 0;
   border: 0;
@@ -632,6 +632,7 @@ textarea {
     display: flex;
     justify-content: space-between;
     font-size: 1.125em;
+    padding-bottom: 80px;
     .skills__sidebar_left{
       @include skills__sidebar;
     }
@@ -660,6 +661,47 @@ textarea {
           background: $timeline-color;
         }
       }
+    }
+  }
+}
+
+.communication{
+  display: flex;
+  &__sidebar{
+    display: flex;
+    width: 110%;
+    flex-direction: column;
+    &-icon{
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      font-size: 2.2em;
+    }
+    &-block{
+      display: flex;
+    }
+    &-title{
+      font-weight: 600;
+    }
+    &-button{
+      @include button;
+    }
+    &_left{
+      border-right: 1px solid #ccc;
+      height: 100%;
+      & input, textarea{
+        @include file-forms;
+      }
+      & textarea{
+        height: 93px;
+      }
+      .communication__sidebar-title{
+        font-size: 1.375em;
+      }
+    }
+    &_right{
+      justify-content: space-between;
     }
   }
 }

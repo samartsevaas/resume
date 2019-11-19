@@ -98,5 +98,19 @@
     }
   }
   width: 40%;
+}
 
+@mixin placeholder{
+  color:#ccc;
+  font-style: italic;
+}
+@mixin file-forms{
+  padding: 10px;
+  font:{
+    size: 0.875em;
+    style: italic;
+  };
+  width: 80%;
+  border: 1px solid #000;
+  margin-top: 25px;
 }
