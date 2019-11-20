@@ -30,6 +30,7 @@
   padding: 80px;
   padding-bottom: 0;
   line-height: 1.2;
+  max-width: 950px;
 }
 
 @mixin title__underline{
@@ -111,3 +112,7 @@
   border: 1px solid #000;
   margin-top: 25px;
 }
+@mixin footer-icon{
+  font-size: 1.325em;
+  color: #9b9b9b;
+  }

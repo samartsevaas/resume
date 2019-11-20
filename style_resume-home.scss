@@ -310,7 +310,9 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-
+a{
+  cursor:pointer;
+}
 textarea {
   overflow: auto; /* 1 */
   vertical-align: top; /* 2 */
@@ -384,11 +386,9 @@ textarea {
   max-width: 950px;
   width: 100%;
   display: flex;
-  @include blocks_between;
-
 }
 .chanel__bottom{
-  padding-bottom: 0
+  padding-bottom: 0;
 }
 .welcome{
   width: 100%;
@@ -416,7 +416,9 @@ textarea {
     };
   }
 }
-
+.intro-welcome{
+  @include blocks_between;
+}
 
 .left-sidebar{
   position: fixed;
@@ -502,12 +504,13 @@ textarea {
     @include title__underline;
   }
 }
-
-
 .timeline{
   display: block;
   & .timeline-ul{
     @include blocks_between;
+    &-noborder{
+      border-bottom: none;
+    }
     & li:last-child{
       padding-bottom: 0;
     }
@@ -668,6 +671,7 @@ textarea {
 
 .communication{
   display: flex;
+  @include blocks_between;
   &__sidebar{
     display: flex;
     width: 110%;
@@ -719,6 +723,52 @@ textarea {
     }
     &_right{
       justify-content: space-between;
+    }
+  }
+}
+
+footer{
+  .blocks-tittle{
+    padding-top: 30px;
+  }
+  .social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    &-copyright{
+      display: flex;
+      justify-content: center;
+      font-size: 0.875em;
+      margin-bottom: 25px;
+    }
+    &-twitter{
+      @include footer-icon;
+      i{
+        padding: 0 10px;
+        border-right: 1px solid #9b9b9b;
+      }
+      & a:hover{
+        color: #69d4d8;
+      }
+    }
+    &-skype{
+      @include footer-icon;
+      i{
+        padding: 0 10px;
+        border-right: 1px solid #9b9b9b;
+      }
+      & a:hover{
+        color: #00AFF0;
+      }
+    }
+    &-ball{
+      @include footer-icon;
+      i{
+        padding: 0 10px;
+      }
+      & a:hover{
+        color: #FFA601;
+      }
     }
   }
 }
