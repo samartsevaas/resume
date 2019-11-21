@@ -727,14 +727,13 @@ textarea {
   }
 }
 
+.pad{
+  padding-top: 30px;
+}
 footer{
-  .blocks-tittle{
-    padding-top: 30px;
-  }
   .social-links{
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
     &-copyright{
       display: flex;
       justify-content: center;
