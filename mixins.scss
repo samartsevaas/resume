@@ -17,7 +17,7 @@
   content: "";
   width: 75px;
   height: 2px;
-  background: red;
+  background: $pink-color;
   position: absolute;
   margin-top: 43px;
 }
@@ -115,4 +115,22 @@
 @mixin footer-icon{
   font-size: 1.325em;
   color: #9b9b9b;
+}
+
+@mixin portfolio-item_style{
+  padding:17px;
+  line-height: 2;
+  color: #fff;
+  h1{
+    font:{
+      size: 1.375em;
+      weight: 600;
+    }
   }
+  p{
+    margin-bottom: 25px;
+  }
+  a{
+    color: #fff;
+  }
+}

@@ -309,6 +309,7 @@ input::-moz-focus-inner {
  */
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 textarea {
@@ -486,7 +487,7 @@ textarea {
   content: "";
   width: 75px;
   height: 2px;
-  background: red;
+  background: #fb6470;
   position: absolute;
   margin-top: 43px;
 }
@@ -522,7 +523,7 @@ textarea {
   content: "";
   width: 75px;
   height: 2px;
-  background: red;
+  background: #fb6470;
   position: absolute;
   margin-top: 43px;
 }
