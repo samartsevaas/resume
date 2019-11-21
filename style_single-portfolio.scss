@@ -1,0 +1,113 @@
+@import "color";
+@import "mixins";
+
+.blocks-tittle{
+  padding-top: 0;
+}
+
+.single-portfolio_title{
+  &-block{
+    width: 100%;
+    height: 445px;
+    background: $main-color;
+    padding-top: 0;
+  }
+  &-info{
+    padding: 30px 0 30px 15px;
+    background: #3d4f59;
+    color: #fff;
+    line-height: 1.5;
+    h1{
+      font: {
+        weight: 600;
+        size: 2em;
+      };
+    }
+  }
+}
+.university-article{
+  width: 100%;
+  &_item{
+    margin: 50px 0;
+    &-more-half{
+      width: 70%;
+    }
+    &-half{
+      width: 50%;
+    }
+    &-more-then-half{
+      width: 80%;
+    }
+  }
+  &_button{
+    @include button;
+    padding: 10px 25px;
+    background: #333;
+    margin-top: 20px;
+  }
+}
+.comments{
+  margin-top: 50px;
+  & .comments_item{
+    display: flex;
+    &-userpic{
+      margin-right: 30px;
+      position: relative;
+      &:before{
+        content: "Reply";
+        position: absolute;
+        margin-bottom: 10px;
+        top: -26px;
+        right: 0;
+        font-weight: 600;
+      }
+    }
+    h1{
+      font: {
+        weight: 600;
+        size: 1.125em;
+      };
+      float: left;
+      margin-right: 10px;
+    }
+    p{
+      font-size: 0.875em;
+      clear: both;
+    }
+    &-next-one{
+      margin-left: 95px;
+      margin-top: 70px;
+    }
+  }
+}
+
+.feedback{
+  margin-top: 50px;
+  & .feedback_item{
+
+    &-placeholder{
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      input{
+        @include feedback_forms;
+      }
+      textarea{
+        @include feedback_forms;
+        height: 160px;
+      }
+    }
+    &-button {
+      @include button;
+      background: #333;
+      padding: 15px 0;
+      font-size: 1.125em;
+      width: 100%;
+      font-family: $basic-font;
+    }
+  }
+}
+
+.communication,.pad{
+  padding-top: 80px;
+}

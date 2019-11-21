@@ -134,3 +134,15 @@
     color: #fff;
   }
 }
+@mixin feedback_forms{
+  width: 100%;
+  font-family: $basic-font;
+  padding: 15px;
+  border: 1px solid #333;
+  margin-bottom: 15px;
+  font: {
+    size: 0.875em;
+    weight: 600;
+    style: italic;
+  };
+}
